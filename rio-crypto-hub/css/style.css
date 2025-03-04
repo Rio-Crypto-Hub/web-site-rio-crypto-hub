@@ -1,0 +1,162 @@
+/* style.css */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+header, footer {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+details[open] summary {
+    color: #e91e63; /* Cor rosa para o summary quando aberto */
+}
+
+details summary:hover {
+    color: #e91e63;
+}
+
+/* Ajustes para a seção hero com imagem de fundo */
+.bg-cover {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-opacity-50 {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Estilização dos ícones de redes sociais (usando Font Awesome) */
+.fab {
+    font-size: 1.25rem;
+}
+
+/* Estilização das avaliações (estrelas) */
+.text-yellow-500::before {
+    content: "★★★★★";
+}
+
+/* Estilização da tabela de cronograma */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 0.5rem 1rem;
+}
+
+th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+}
+
+tr {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+tr:last-child {
+    border-bottom: none;
+}
+
+/* Estilização dos posts do blog */
+article {
+    border-left: 4px solid #e91e63; /* Linha rosa à esquerda, como na imagem */
+}
+
+article img {
+    border-radius: 8px;
+}
+
+/* Estilização dos depoimentos */
+.bg-pink-50 {
+    border-left: 4px solid #e91e63; /* Linha rosa à esquerda, como na imagem */
+}
+
+/* Ajustes para os passos do processo */
+.grid-cols-1.md\\:grid-cols-2 img {
+    border-radius: 8px;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 640px) { /* sm breakpoint (celulares) */
+    .grid-cols-1 {
+        grid-template-columns: 1fr;
+    }
+    .text-2xl {
+        font-size: 1.5rem;
+    }
+    .text-lg {
+        font-size: 1rem;
+    }
+    .text-xl {
+        font-size: 1.25rem;
+    }
+    .p-4 {
+        padding: 0.75rem;
+    }
+    .py-16 {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+    .bg-cover {
+        background-size: cover;
+        height: 200px; /* Altura menor para celulares */
+    }
+    .text-sm {
+        font-size: 0.875rem;
+    }
+    .h-48 {
+        height: 12rem; /* Ajuste para imagens em celulares */
+    }
+    .h-12 {
+        height: 8rem; /* Ajuste para logos em celulares */
+    }
+    table {
+        font-size: 0.875rem;
+    }
+    th, td {
+        padding: 0.25rem 0.5rem;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) { /* md breakpoint (tablets) */
+    .grid-cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .text-3xl {
+        font-size: 2rem;
+    }
+    .text-xl {
+        font-size: 1.5rem;
+    }
+    .py-24 {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+    .bg-cover {
+        height: 300px; /* Altura ajustada para tablets */
+    }
+    .h-64 {
+        height: 16rem; /* Ajuste para imagens em tablets */
+    }
+    .h-16 {
+        height: 10rem; /* Ajuste para logos em tablets */
+    }
+    table {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1025px) { /* lg breakpoint (desktops) */
+    .bg-cover {
+        height: 400px; /* Altura maior para desktops, como na imagem original */
+    }
+    .h-64 {
+        height: 16rem; /* Ajuste para imagens em desktops */
+    }
+    .h-16 {
+        height: 12rem; /* Ajuste para logos em desktops */
+    }
+}
